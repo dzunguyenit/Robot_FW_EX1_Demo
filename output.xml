@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180906 17:03:09.398" generator="Robot 3.0.4 (Python 2.7.10 on win32)">
+<suite source="E:\Robot_FrameWork\Ex1\suite_01_demo.txt" id="s1" name="Suite 01 Demo">
+<kw type="setup" name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Test Suite Started</arg>
+</arguments>
+<status status="PASS" endtime="20180906 17:03:09.558" starttime="20180906 17:03:09.557"></status>
+</kw>
+<test id="s1-t1" name="TC_BankGuru">
+<kw type="setup" name="LoginGuru">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180906 17:03:09.560" level="INFO">Opening browser 'chrome' to base url 'http://demo.guru99.com/v4/'.</msg>
+<status status="PASS" endtime="20180906 17:03:19.194" starttime="20180906 17:03:09.559"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180906 17:03:20.380" starttime="20180906 17:03:19.194"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@name='uid']</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180906 17:03:20.382" level="INFO">Typing text 'mngr150903' into text field 'xpath=//input[@name='uid']'.</msg>
+<status status="PASS" endtime="20180906 17:03:20.595" starttime="20180906 17:03:20.381"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180906 17:03:20.596" level="INFO">Typing text 'bAdamAt' into text field 'xpath=//input[@name='password']'.</msg>
+<status status="PASS" endtime="20180906 17:03:20.918" starttime="20180906 17:03:20.595"></status>
+</kw>
+<status status="PASS" endtime="20180906 17:03:20.918" starttime="20180906 17:03:09.559"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@name='btnLogin']</arg>
+</arguments>
+<msg timestamp="20180906 17:03:20.920" level="INFO">Clicking element 'xpath=//input[@name='btnLogin']'.</msg>
+<status status="PASS" endtime="20180906 17:03:23.583" starttime="20180906 17:03:20.919"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180906 17:03:25.972" starttime="20180906 17:03:23.585"></status>
+</kw>
+<tags>
+<tag>runDemo</tag>
+</tags>
+<status status="PASS" endtime="20180906 17:03:25.973" critical="yes" starttime="20180906 17:03:09.558"></status>
+</test>
+<kw type="teardown" name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Test Suite Ended</arg>
+</arguments>
+<status status="PASS" endtime="20180906 17:03:25.978" starttime="20180906 17:03:25.977"></status>
+</kw>
+<status status="PASS" endtime="20180906 17:03:25.978" starttime="20180906 17:03:09.401"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">runDemo</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Suite 01 Demo" pass="1">Suite 01 Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

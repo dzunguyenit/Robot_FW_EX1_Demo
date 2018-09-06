@@ -1,0 +1,23 @@
+*** Settings ***
+Suite Setup       Log To Console    Test Suite Started
+Suite Teardown    Log To Console    Test Suite Ended
+Library           SeleniumLibrary
+
+*** Variables ***
+${url}            http://demo.guru99.com/v4/    # Link Guru99 Bank
+${username}       mngr150903
+${password}       bAdamAt
+
+*** Test Cases ***
+TC_BankGuru
+    [Tags]    runDemo
+    [Setup]    LoginGuru
+    Click Element    xpath=//input[@name='btnLogin']
+    [Teardown]    Close Browser
+
+*** Keywords ***
+LoginGuru
+    Open Browser    ${url}    chrome
+    Maximize Browser Window
+    Input Text    xpath=//input[@name='uid']    ${username}
+    Input Text    xpath=//input[@name='password']    ${password}
